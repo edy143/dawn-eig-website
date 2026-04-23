@@ -34,7 +34,7 @@
 
 .hero__subtitle--about {
   font-style: italic;
-  margin-top: calc(-1 * var(--space-2));
+  margin-top: calc(-1 * var(--space-4));
 }
 
 .hero__text {
