@@ -4,11 +4,9 @@
  */
 
 import { initNav } from './nav.js';
-import { initForm } from './form.js';
 import { initTheme } from './theme.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
-  initForm();
   initTheme();
 });

@@ -46,57 +46,30 @@
       <div class="container">
         <header class="section__header section__header--center">
           <h1 id="contact-heading" class="section__title">Let's Connect</h1>
-          <p style="margin-inline: auto;">Taking the first step can feel difficult. I offer a free 15-minute consultation so we can explore what you need. You can reach me by phone, email, or the form below.</p>
+          <p style="margin-inline: auto;">Taking the first step can feel difficult. I offer a free 15-minute consultation so we can explore what you need. You can reach me by phone or email.</p>
         </header>
 
         <div class="grid grid--2" style="align-items: start; gap: var(--space-16);">
-          <!-- Contact Form -->
+          <!-- Email Contact -->
           <div>
-            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Send a message</h2>
-            <form id="contact-form" class="form" action="/api/contact" method="POST" novalidate>
-              <div class="form__success" id="form-success" role="status" aria-live="polite">
-                <p>Thank you for reaching out. I typically respond within 24 hours.</p>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="name">Name <span aria-label="required">*</span></label>
-                <input class="form__input" type="text" id="name" name="name" required autocomplete="name" aria-required="true" aria-describedby="name-error">
-                <span class="form__error" id="name-error">Please enter your name.</span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="email">Email <span aria-label="required">*</span></label>
-                <input class="form__input" type="email" id="email" name="email" required autocomplete="email" aria-required="true" aria-describedby="email-error">
-                <span class="form__error" id="email-error">Please enter a valid email address.</span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="phone">Phone <span class="form__label-hint" style="font-weight: 400; color: var(--color-text-secondary);">(optional)</span></label>
-                <input class="form__input" type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-hint">
-                <span class="form__error" id="phone-error">Please enter a valid phone number.</span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="message">What brings you to therapy? <span aria-label="required">*</span></label>
-                <textarea class="form__textarea" id="message" name="message" required aria-required="true" aria-describedby="message-error"></textarea>
-                <span class="form__error" id="message-error">Please share a brief description.</span>
-              </div>
-
-              <button type="submit" class="btn btn--primary" id="form-submit">Send message</button>
-              <p style="margin-top: var(--space-4); font-size: var(--font-size-xs); color: var(--color-text-secondary);">Your information is kept confidential and used only to respond to your inquiry.</p>
-            </form>
+            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Send an email</h2>
+            <p style="margin-bottom: var(--space-6);">You can reach me directly by email. I typically respond within one business day.</p>
+            <p style="margin-bottom: var(--space-6); font-size: var(--font-size-lg);">
+              <a href="mailto:contact@dawneiglp.com">contact@dawneiglp.com</a>
+            </p>
+            <button class="btn btn--primary" id="copy-email" type="button" data-email="contact@dawneiglp.com">Copy email address</button>
           </div>
 
           <!-- Contact Info -->
           <div>
-            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Contact Information</h2>
+            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Contact information</h2>
             <div style="margin-bottom: var(--space-8);">
               <h3 style="font-family: var(--font-serif); font-size: var(--font-size-lg); margin-bottom: var(--space-2);">Phone</h3>
-              <p><a href="tel:+191****6886">(917) 494-6886</a></p>
+              <p><a href="tel:+19174946886">(917) 494-6886</a></p>
             </div>
 
             <div style="margin-bottom: var(--space-8);">
-              <h3 style="font-family: var(--font-serif); font-size: var(--font-size-lg); margin-bottom: var(--space-2);">Office Address</h3>
+              <h3 style="font-family: var(--font-serif); font-size: var(--font-size-lg); margin-bottom: var(--space-2);">Office address</h3>
               <p>
                 156 5th Avenue<br>
                 New York, NY 10010
@@ -158,5 +131,22 @@
   </footer>
 
   <script type="module" src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('copy-email');
+      if (!btn) return;
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.email);
+          const original = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(() => btn.textContent = original, 2000);
+        } catch (e) {
+          btn.textContent = 'Could not copy';
+          setTimeout(() => btn.textContent = 'Copy email address', 2000);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
