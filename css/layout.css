@@ -39,6 +39,20 @@
   color: rgba(245, 240, 235, 0.85);
 }
 
+.section--dark .card {
+  color: var(--color-text-primary);
+}
+
+.section--dark .card h3,
+.section--dark .card .card__title {
+  color: var(--color-text-primary);
+}
+
+.section--dark .card p,
+.section--dark .card .card__text {
+  color: var(--color-text-secondary);
+}
+
 .grid {
   display: grid;
   gap: var(--space-8);

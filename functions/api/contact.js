@@ -27,14 +27,14 @@ function validatePhone(phone) {
 }
 
 async function sendEmail({ name, email, phone, message }, env) {
-  if (!env.RESEND_API_KEY || !env.CONTACT_EMAIL) {
-    console.log('Email forwarding skipped: missing RESEND_API_KEY or CONTACT_EMAIL');
+  if (!env.RESEND_API_KEY || !env.dawnemail) {
+    console.log('Email forwarding skipped: missing RESEND_API_KEY or dawnemail');
     return true;
   }
 
   const payload = {
     from: 'Dawn Eig Website <contact@dawneig.com>',
-    to: env.CONTACT_EMAIL,
+    to: env.dawnemail,
     subject: `New inquiry from ${name}`,
     text: [
       `Name: ${name}`,
