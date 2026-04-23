@@ -57,6 +57,13 @@
   object-fit: cover;
 }
 
+/* About page bio text */
+.bio__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  max-width: 55ch;
+}
+
 @media (min-width: 48rem) {
   .hero {
     padding-block: var(--space-24);

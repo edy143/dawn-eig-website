@@ -31,7 +31,7 @@
 
 .nav__links {
   display: none;
-  gap: var(--space-8);
+  gap: var(--space-12);
   align-items: center;
 }
 
