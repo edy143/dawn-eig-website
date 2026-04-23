@@ -54,7 +54,7 @@
 .hero__image img {
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (min-width: 48rem) {
