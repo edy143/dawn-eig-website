@@ -53,7 +53,7 @@
   order: 1;
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .hero__image img {
@@ -108,10 +108,8 @@
 .section__eyebrow {
   display: block;
   font-family: var(--font-sans);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
   color: var(--color-accent);
   margin-bottom: var(--space-3);
 }
@@ -128,7 +126,8 @@
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
   max-width: 50ch;
-  margin-inline: auto;
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-6);
 }
 
 .quote__attribution {

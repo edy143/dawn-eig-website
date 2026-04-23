@@ -38,8 +38,6 @@
 .nav__link {
   font-size: var(--font-size-sm);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--color-text-primary);
 }
 
@@ -124,6 +122,15 @@
 
 .btn:hover {
   text-decoration: none;
+}
+
+.btn:active {
+  opacity: 0.92;
+}
+
+.btn--primary:focus-visible,
+.btn--on-dark:focus-visible {
+  outline-color: var(--color-bg-secondary);
 }
 
 .btn--primary {
