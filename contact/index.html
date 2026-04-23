@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dawn Eig, Licensed Psychoanalyst in NYC. Schedule a free 15-minute consultation by phone or email.">
+  <title>Contact — Dawn Eig, LP | Licensed Psychoanalyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Dawn Eig, LP</a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="/about/" class="nav__link">About</a>
+        <a href="/services/" class="nav__link">Services</a>
+        <a href="/contact/" class="nav__link" aria-current="page">Contact</a>
+      </nav>
+      <a href="/contact/" class="btn btn--primary nav__cta">Schedule a Consultation</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="nav-mobile" class="nav__mobile container">
+      <a href="/about/" class="nav__link">About</a>
+      <a href="/services/" class="nav__link">Services</a>
+      <a href="/contact/" class="nav__link" aria-current="page">Contact</a>
+      <a href="/contact/" class="btn btn--primary">Schedule a Consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section section--primary" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <span class="section__eyebrow">Contact</span>
+          <h1 id="contact-heading" class="section__title">Let's Connect</h1>
+          <p style="margin-inline: auto;">Taking the first step can feel difficult. I offer a free 15-minute consultation so we can explore what you need. You can reach me by phone, email, or the form below.</p>
+        </header>
+
+        <div class="grid grid--2" style="align-items: start; gap: var(--space-16);">
+          <!-- Contact Form -->
+          <div>
+            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Send a Message</h2>
+            <form id="contact-form" class="form" action="/api/contact" method="POST" novalidate>
+              <div class="form__success" id="form-success" role="status" aria-live="polite">
+                <p>Thank you for reaching out. I typically respond within 24 hours.</p>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="name">Name <span aria-label="required">*</span></label>
+                <input class="form__input" type="text" id="name" name="name" required autocomplete="name" aria-required="true" aria-describedby="name-error">
+                <span class="form__error" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="email">Email <span aria-label="required">*</span></label>
+                <input class="form__input" type="email" id="email" name="email" required autocomplete="email" aria-required="true" aria-describedby="email-error">
+                <span class="form__error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="phone">Phone <span class="form__label-hint" style="font-weight: 400; color: var(--color-text-secondary);">(optional)</span></label>
+                <input class="form__input" type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-hint">
+                <span class="form__error" id="phone-error">Please enter a valid phone number.</span>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="message">What brings you to therapy? <span aria-label="required">*</span></label>
+                <textarea class="form__textarea" id="message" name="message" required aria-required="true" aria-describedby="message-error"></textarea>
+                <span class="form__error" id="message-error">Please share a brief description.</span>
+              </div>
+
+              <button type="submit" class="btn btn--primary" id="form-submit">Send Message</button>
+              <p style="margin-top: var(--space-4); font-size: var(--font-size-xs); color: var(--color-text-secondary);">Your information is kept confidential and used only to respond to your inquiry.</p>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h2 class="section__title" style="font-size: var(--font-size-xl); margin-bottom: var(--space-6);">Contact Information</h2>
+            <div class="card" style="margin-bottom: var(--space-6);">
+              <h3 class="card__title" style="font-size: var(--font-size-lg);">Phone</h3>
+              <p class="card__text"><a href="tel:+19174946886">(917) 494-6886</a></p>
+              <p class="card__text" style="margin-top: var(--space-2);">I typically return calls within 24 hours.</p>
+            </div>
+
+            <div class="card" style="margin-bottom: var(--space-6);">
+              <h3 class="card__title" style="font-size: var(--font-size-lg);">Office Address</h3>
+              <p class="card__text">
+                156 5th Avenue, Suite 1107<br>
+                New York, NY 10010
+              </p>
+              <p class="card__text" style="margin-top: var(--space-2);">Flatiron District &middot; In-person and online sessions available</p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title" style="font-size: var(--font-size-lg);">Availability</h3>
+              <p class="card__text">I offer daytime and early evening appointments, Monday through Friday. Online sessions are available for clients throughout New York State.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark text-center" aria-labelledby="cta-contact-heading">
+      <div class="container">
+        <h2 id="cta-contact-heading" class="section__title">Prefer to call?</h2>
+        <p style="margin-inline: auto; margin-bottom: var(--space-8);">A brief phone call is often the easiest way to get started. I offer a free 15-minute consultation with no obligation.</p>
+        <a href="tel:+19174946886" class="btn btn--on-dark">Call (917) 494-6886</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__brand">Dawn Eig, LP</p>
+        <p class="footer__text">Licensed Psychoanalyst in New York City. Individual and couples therapy, in-person and online.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="/" class="footer__link">Home</a>
+          <a href="/about/" class="footer__link">About</a>
+          <a href="/services/" class="footer__link">Services</a>
+          <a href="/contact/" class="footer__link">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <div class="footer__links">
+          <a href="tel:+19174946886" class="footer__link">(917) 494-6886</a>
+          <span class="footer__link">156 5th Avenue, Suite 1107<br>New York, NY 10010</span>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Legal</p>
+        <div class="footer__links">
+          <span class="footer__link">License: NY State 001272</span>
+          <span class="footer__link">Out of Network</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Dawn Eig. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
