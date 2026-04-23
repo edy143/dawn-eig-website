@@ -32,6 +32,11 @@
   margin-bottom: var(--space-6);
 }
 
+.hero__subtitle--about {
+  font-style: italic;
+  margin-top: calc(-1 * var(--space-2));
+}
+
 .hero__text {
   font-size: var(--font-size-md);
   line-height: var(--line-height-relaxed);
