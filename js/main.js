@@ -3,9 +3,10 @@
  * Initializes all modules. Each module is self-contained and guards against missing DOM elements.
  */
 
-import { initDropdowns, initMobileNav } from './nav.js';
+import { initNav } from './nav.js';
+import { initTheme } from './theme.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initDropdowns();
-  initMobileNav();
+  initNav();
+  initTheme();
 });
