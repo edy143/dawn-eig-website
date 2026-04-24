@@ -196,6 +196,6 @@
 
 @media (min-width: 48rem) {
   .footer__inner {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 }

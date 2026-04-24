@@ -31,7 +31,7 @@
 
 .nav__links {
   display: none;
-  gap: var(--space-12);
+  gap: var(--space-8);
   align-items: center;
 }
 
@@ -268,7 +268,7 @@
   border: 0;
 }
 
-/* ---- Dropdown Panels ---- */
+/* ---- Dropdown Panels (compact floating) ---- */
 .nav__dropdown {
   position: relative;
 }
@@ -306,19 +306,19 @@
 }
 
 .nav__dropdown-panel {
-  position: fixed;
-  top: 4rem;
+  position: absolute;
+  top: calc(100% + 0.5rem);
   left: 0;
-  width: 100%;
-  max-height: calc(100vh - 4rem);
-  overflow-y: auto;
+  width: 22rem;
+  max-width: calc(100vw - var(--space-6));
   background-color: var(--color-bg-secondary);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   z-index: 90;
-  padding-block: var(--space-10);
+  padding: var(--space-2);
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
   visibility: hidden;
   pointer-events: none;
@@ -331,29 +331,41 @@
   pointer-events: auto;
 }
 
-.nav__dropdown-panel .grid {
-  gap: var(--space-10);
+/* Right-align last two dropdowns so they don't go off-screen */
+.nav__dropdown:nth-last-child(2) .nav__dropdown-panel,
+.nav__dropdown:nth-last-child(3) .nav__dropdown-panel {
+  left: auto;
+  right: 0;
 }
 
-.nav__dropdown-panel h3 {
+.nav__dropdown-item {
+  display: block;
+  padding: var(--space-4) var(--space-5);
+  border-radius: calc(var(--border-radius) - 2px);
+  transition: background-color var(--transition-fast);
+}
+
+.nav__dropdown-item:hover {
+  background-color: var(--color-bg-primary);
+  text-decoration: none;
+}
+
+.nav__dropdown-item h4 {
   font-family: var(--font-serif);
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-3);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
   color: var(--color-text-primary);
 }
 
-.nav__dropdown-panel p {
+.nav__dropdown-item p {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
 }
 
 .nav__dropdown-panel .btn {
-  margin-top: var(--space-4);
-}
-
-.nav__dropdown-panel .list-block__item {
-  padding: var(--space-5) 0;
+  margin: var(--space-3) var(--space-5) var(--space-4);
 }
 
 /* Mobile accordion inside hamburger */

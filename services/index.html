@@ -22,9 +22,86 @@
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Dawn Eig, LP</a>
       <nav class="nav__links" aria-label="Primary navigation">
-        <a href="/about/" class="nav__link">About</a>
-        <a href="/services/" class="nav__link" aria-current="page">Services</a>
-        <a href="/faq/" class="nav__link">FAQ</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-services">
+            Services Offered
+            <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="dd-services" class="nav__dropdown-panel" hidden>
+            <a href="/services/#individual-therapy" class="nav__dropdown-item">
+              <h4>Individual Therapy</h4>
+              <p>A dedicated space to explore your inner life, understand patterns that hold you back, and move toward deeper freedom and authenticity.</p>
+            </a>
+            <a href="/services/#individual-psychoanalysis" class="nav__dropdown-item">
+              <h4>Individual Psychoanalysis</h4>
+              <p>An immersive, deeply collaborative process that uses the therapeutic relationship to explore your inner world in a sustained and meaningful way.</p>
+            </a>
+            <a href="/services/#couples-therapy" class="nav__dropdown-item">
+              <h4>Couples Therapy</h4>
+              <p>A space where the relationship itself becomes the focus, helping you understand dynamics, communicate more clearly, and feel more connected.</p>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-philosophy">
+            Philosophy
+            <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="dd-philosophy" class="nav__dropdown-panel" hidden>
+            <a href="/about/" class="nav__dropdown-item">
+              <h4>My Approach</h4>
+              <p>My approach to therapy is primarily psychoanalytic. Rather than seeing symptoms as problems to eliminate, it understands them as expressions of underlying emotional conflicts, often outside of awareness.</p>
+            </a>
+            <a href="/about/" class="nav__dropdown-item">
+              <h4>Integrative & Flexible</h4>
+              <p>While my training is grounded in psychoanalysis, I don't see therapy as one-size-fits-all. Each person brings different needs, goals, and ways of engaging in the process.</p>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-training">
+            Training
+            <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="dd-training" class="nav__dropdown-panel" hidden>
+            <a href="/about/" class="nav__dropdown-item">
+              <h4>Psychoanalytic Training</h4>
+              <p>I received my psychoanalytic training at the National Institute for the Psychotherapies, where I trained as a relationally oriented psychotherapist and psychoanalyst.</p>
+            </a>
+            <a href="/about/" class="nav__dropdown-item">
+              <h4>Education & Prior Career</h4>
+              <p>I earned my Bachelor's degree in Psychology from the University of Colorado Boulder and later completed my MBA before transitioning into psychotherapy.</p>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-working">
+            Working With Me
+            <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="dd-working" class="nav__dropdown-panel" hidden>
+            <a href="/services/" class="nav__dropdown-item">
+              <h4>Location</h4>
+              <p>My office is located at 156 5th Avenue. I am available to work by Zoom but find that working together in person is far preferable.</p>
+            </a>
+            <a href="/services/" class="nav__dropdown-item">
+              <h4>Fees</h4>
+              <p>My standard fee is discussed during the initial consultation. I reserve a percentage of my practice for people who need lower fees.</p>
+            </a>
+            <a href="/services/" class="nav__dropdown-item">
+              <h4>Insurance</h4>
+              <p>I'm not in network with any insurance companies. If you have out-of-network benefits, you can be reimbursed. I'll provide a monthly superbill.</p>
+            </a>
+          </div>
+        </div>
         <a href="/contact/" class="nav__link">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary nav__cta">Contact</a>
@@ -35,77 +112,73 @@
       </button>
     </div>
     <div id="nav-mobile" class="nav__mobile container">
-      <a href="/about/" class="nav__link">About</a>
-      <a href="/services/" class="nav__link" aria-current="page">Services</a>
-      <a href="/faq/" class="nav__link">FAQ</a>
-      <a href="/contact/" class="nav__link">Contact</a>
-      <a href="/contact/" class="btn btn--primary">Contact</a>
-    </div>
-
-    <!-- Dropdown panels -->
-    <div id="dd-services" class="nav__dropdown-panel" hidden>
-      <div class="container">
-        <div class="grid grid--3">
-          <article>
-            <h3>Individual Therapy</h3>
-            <p>A dedicated space to explore your inner life, understand patterns that hold you back, and move toward deeper freedom and authenticity.</p>
-          </article>
-          <article>
-            <h3>Individual Psychoanalysis</h3>
-            <p>An immersive, deeply collaborative process that uses the therapeutic relationship to explore your inner world in a sustained and meaningful way.</p>
-          </article>
-          <article>
-            <h3>Couples Therapy</h3>
-            <p>A space where the relationship itself becomes the focus, helping you understand dynamics, communicate more clearly, and feel more connected.</p>
-          </article>
-        </div>
-        <div class="text-center" style="margin-top: var(--space-8);">
+      <button class="nav__accordion-toggle" aria-expanded="false" aria-controls="mob-services">
+        Services Offered
+        <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="mob-services" class="nav__accordion-content">
+        <div>
+          <h4>Individual Therapy</h4>
+          <p>A dedicated space to explore your inner life, understand patterns that hold you back, and move toward deeper freedom and authenticity.</p>
+          <h4>Individual Psychoanalysis</h4>
+          <p>An immersive, deeply collaborative process that uses the therapeutic relationship to explore your inner world in a sustained and meaningful way.</p>
+          <h4>Couples Therapy</h4>
+          <p>A space where the relationship itself becomes the focus, helping you understand dynamics, communicate more clearly, and feel more connected.</p>
           <a href="/services/" class="btn btn--secondary">Explore all services</a>
         </div>
       </div>
-    </div>
 
-    <div id="dd-philosophy" class="nav__dropdown-panel" hidden>
-      <div class="container container--narrow">
-        <h3>My Approach</h3>
-        <p style="margin-bottom: var(--space-4);">My approach to therapy is primarily psychoanalytic. People often wonder how this differs from more cognitive or behavioral approaches, and the distinction is meaningful. Cognitive behavioral therapy tends to focus on identifying patterns in thoughts and behaviors that are more immediately accessible and conscious. From there, the work often involves developing practical strategies to address symptoms in a direct and structured way.</p>
-        <p style="margin-bottom: var(--space-4);">A psychoanalytic approach looks at symptoms from a different perspective. Rather than seeing them as problems to eliminate, it understands them as expressions of underlying emotional conflicts, often outside of awareness. Feelings like anxiety, for example, don't arise randomly; they can serve a psychological function, even if they are distressing.</p>
-        <p>While my training is grounded in psychoanalysis, I don't see therapy as one-size-fits-all. Each person brings different needs, goals, and ways of engaging in the process.</p>
-        <a href="/about/" class="btn btn--secondary">Read more about my approach</a>
-      </div>
-    </div>
-
-    <div id="dd-training" class="nav__dropdown-panel" hidden>
-      <div class="container container--narrow">
-        <h3>My Background</h3>
-        <p style="margin-bottom: var(--space-4);">I received my psychoanalytic training at the National Institute for the Psychotherapies, where I trained as a relationally oriented psychotherapist and psychoanalyst. This intensive program included advanced coursework, clinical training, supervision, and personal analysis, and continues to inform my approach to therapeutic work.</p>
-        <p style="margin-bottom: var(--space-4);">I earned my Bachelor's degree in Psychology from the University of Colorado Boulder, where I first developed an interest in understanding human behavior and emotional life. I later completed my MBA and spent a decade working in finance before transitioning into the field of psychotherapy.</p>
-        <p>This combination of experiences continues to shape my perspective, particularly in understanding the complexities of both personal and professional life, as well as the many transitions people navigate over time.</p>
-        <a href="/about/" class="btn btn--secondary">Read more about my background</a>
-      </div>
-    </div>
-
-    <div id="dd-working" class="nav__dropdown-panel" hidden>
-      <div class="container container--narrow">
-        <div class="list-block">
-          <div class="list-block__item">
-            <h3 class="list-block__title">Location</h3>
-            <p class="list-block__text">My office is located at 156 5th Avenue. I am available to work by Zoom but I find that working together in person is far preferable. There is no substitute for being in the presence of another. I am happy to discuss.</p>
-          </div>
-          <div class="list-block__item">
-            <h3 class="list-block__title">Fees</h3>
-            <p class="list-block__text">My standard fee is discussed during the initial consultation. For patients who qualify, I have a sliding fee scale, which is to say that I reserve a percentage of my practice for people who need lower fees.</p>
-          </div>
-          <div class="list-block__item">
-            <h3 class="list-block__title">Insurance</h3>
-            <p class="list-block__text">I'm not in network with any insurance companies. If you have insurance and have out of network benefits, you can be reimbursed by your insurance company for sessions with me. I'll provide you with a monthly superbill. Check with your insurer to see if you have out of network benefits.</p>
-          </div>
+      <button class="nav__accordion-toggle" aria-expanded="false" aria-controls="mob-philosophy">
+        Philosophy
+        <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="mob-philosophy" class="nav__accordion-content">
+        <div>
+          <p>My approach to therapy is primarily psychoanalytic. Rather than seeing symptoms as problems to eliminate, it understands them as expressions of underlying emotional conflicts, often outside of awareness.</p>
+          <p>While my training is grounded in psychoanalysis, I don't see therapy as one-size-fits-all. Each person brings different needs, goals, and ways of engaging in the process.</p>
+          <a href="/about/" class="btn btn--secondary">Read more</a>
         </div>
-        <p style="margin-top: var(--space-6); font-size: var(--font-size-sm); color: var(--color-text-secondary);">My New York license number is: 001272 &middot; My NPI is: 1295348886</p>
-        <a href="/services/" class="btn btn--secondary">Learn more</a>
       </div>
-    </div>
 
+      <button class="nav__accordion-toggle" aria-expanded="false" aria-controls="mob-training">
+        Training
+        <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="mob-training" class="nav__accordion-content">
+        <div>
+          <p>I received my psychoanalytic training at the National Institute for the Psychotherapies, where I trained as a relationally oriented psychotherapist and psychoanalyst.</p>
+          <p>I earned my Bachelor's degree in Psychology from the University of Colorado Boulder and later completed my MBA before transitioning into psychotherapy.</p>
+          <a href="/about/" class="btn btn--secondary">Read more</a>
+        </div>
+      </div>
+
+      <button class="nav__accordion-toggle" aria-expanded="false" aria-controls="mob-working">
+        Working With Me
+        <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="mob-working" class="nav__accordion-content">
+        <div>
+          <h4>Location</h4>
+          <p>My office is located at 156 5th Avenue. I am available to work by Zoom but find that working together in person is far preferable.</p>
+          <h4>Fees</h4>
+          <p>My standard fee is discussed during the initial consultation. I reserve a percentage of my practice for people who need lower fees.</p>
+          <h4>Insurance</h4>
+          <p>I'm not in network with any insurance companies. If you have out-of-network benefits, you can be reimbursed. I'll provide a monthly superbill.</p>
+          <a href="/services/" class="btn btn--secondary">Learn more</a>
+        </div>
+      </div>
+
+      <a href="/contact/" class="nav__link">Contact</a>
+      <a href="/contact/" class="btn btn--primary nav__mobile-cta">Contact</a>
+    </div>
   </header>
 
   <main id="main">
@@ -116,58 +189,42 @@
           <p>I provide psychodynamic and relational therapy for adults and couples, both in-person in the Flatiron District and online throughout New York State.</p>
         </header>
 
-        <div class="grid grid--2" style="gap: var(--space-12);">
-          <article>
-            <span class="section__eyebrow">01</span>
+        <div class="grid grid--3" style="gap: var(--space-12);">
+          <article id="individual-therapy">
             <h2 class="section__title">Individual Therapy</h2>
             <p>Psychotherapy is a shared process -- an encounter between two minds working together to make sense of what feels difficult or overwhelming. At certain moments in life, it becomes hard to navigate things on your own. In those moments, having another person alongside you can open up new ways of understanding. Together, we begin to ask: what are the stories you carry about yourself, and how have they taken shape over time? As we explore these narratives, it often becomes clear that some no longer fit and may be ready to shift.</p>
-            <p style="margin-top: var(--space-4);">When painful experiences remain outside of awareness, they tend to repeat themselves in subtle and not-so-subtle ways. These patterns can begin to feel stuck, as if you're circling the same struggles without resolution. Therapy offers a space to pause these cycles, to look at them more closely, and to begin imagining something different -- so that change feels possible and life becomes more manageable and meaningful.</p>
-            <p style="margin-top: var(--space-4);">People often wonder whether talking alone can truly make a difference. In many cases, it can. Research and clinical experience alike show that meaningful change can emerge through conversation, especially when approached with openness and curiosity. Over time, the therapeutic relationship itself becomes a place where new ways of thinking, feeling, and relating can take shape.</p>
-            <p style="margin-top: var(--space-4);">You might think of therapy as creating room to think and feel more freely -- especially when anxiety, depression, or overwhelm make it hard to find clarity. Within this space, new perspectives can emerge, along with a deeper understanding of yourself and your experiences. As this unfolds, many people begin to feel a sense of relief and greater emotional freedom.</p>
-            <p style="margin-top: var(--space-4);">This process is guided by someone trained to understand emotional pain -- how it develops, how it is expressed, and how it can be worked through with care and attention. Therapy makes it possible to access parts of yourself that may have been out of reach, shaped by past experiences or held outside of awareness. Bringing these elements into view is often an important step toward lasting change.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>When painful experiences remain outside of awareness, they tend to repeat themselves in subtle and not-so-subtle ways. These patterns can begin to feel stuck, as if you're circling the same struggles without resolution. Therapy offers a space to pause these cycles, to look at them more closely, and to begin imagining something different -- so that change feels possible and life becomes more manageable and meaningful.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>People often wonder whether talking alone can truly make a difference. In many cases, it can. Research and clinical experience alike show that meaningful change can emerge through conversation, especially when approached with openness and curiosity. Over time, the therapeutic relationship itself becomes a place where new ways of thinking, feeling, and relating can take shape.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>You might think of therapy as creating room to think and feel more freely -- especially when anxiety, depression, or overwhelm make it hard to find clarity. Within this space, new perspectives can emerge, along with a deeper understanding of yourself and your experiences. As this unfolds, many people begin to feel a sense of relief and greater emotional freedom.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>This process is guided by someone trained to understand emotional pain -- how it develops, how it is expressed, and how it can be worked through with care and attention. Therapy makes it possible to access parts of yourself that may have been out of reach, shaped by past experiences or held outside of awareness. Bringing these elements into view is often an important step toward lasting change.</p>
           </article>
 
-          <article>
-            <span class="section__eyebrow">02</span>
+          <article id="individual-psychoanalysis">
             <h2 class="section__title">Individual Psychoanalysis</h2>
             <p>Psychoanalysis began with Freud at the end of the 19th century, but it has evolved significantly over time. Today, it is a living, dynamic practice shaped by more than a century of clinical experience and new ways of understanding the mind.</p>
-            <p style="margin-top: var(--space-4);">Contemporary psychoanalysis centers on the relationship between you and the analyst. It uses that relationship as a way to explore your inner world -- your thoughts, feelings, memories, and patterns -- in a sustained and meaningful way. The work is immersive and deeply collaborative, grounded in a shared commitment to understanding your experience more fully. Within this process, space is created for insight, connection, and change, allowing for a deeper engagement with areas of conflict, pain, and possibility.</p>
-            <p style="margin-top: var(--space-4);">One of the primary distinctions between psychotherapy and psychoanalysis is the frequency of sessions. While this may seem like a practical detail, it has important implications for the depth of the work. Meeting more frequently allows for a greater sense of continuity and immersion, making it easier to notice patterns as they unfold both within the sessions and in your daily life. This sustained engagement can deepen the process and open up more opportunities for meaningful change.</p>
-            <p style="margin-top: var(--space-4);">At the same time, once-weekly psychotherapy can be highly effective and transformative. The choice of frequency depends on what feels manageable and appropriate for you. When it is possible to meet more often, however, the added consistency and intensity can strengthen the therapeutic relationship and support a more in-depth exploration.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>Contemporary psychoanalysis centers on the relationship between you and the analyst. It uses that relationship as a way to explore your inner world -- your thoughts, feelings, memories, and patterns -- in a sustained and meaningful way. The work is immersive and deeply collaborative, grounded in a shared commitment to understanding your experience more fully. Within this process, space is created for insight, connection, and change, allowing for a deeper engagement with areas of conflict, pain, and possibility.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>One of the primary distinctions between psychotherapy and psychoanalysis is the frequency of sessions. While this may seem like a practical detail, it has important implications for the depth of the work. Meeting more frequently allows for a greater sense of continuity and immersion, making it easier to notice patterns as they unfold both within the sessions and in your daily life. This sustained engagement can deepen the process and open up more opportunities for meaningful change.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>At the same time, once-weekly psychotherapy can be highly effective and transformative. The choice of frequency depends on what feels manageable and appropriate for you. When it is possible to meet more often, however, the added consistency and intensity can strengthen the therapeutic relationship and support a more in-depth exploration.</p>
           </article>
 
-          <article>
-            <span class="section__eyebrow">03</span>
+          <article id="couples-therapy">
             <h2 class="section__title">Couples Therapy</h2>
             <p>Couples therapy is a space where the relationship itself becomes the focus of our work. Rather than concentrating on one person, we pay attention to the dynamic that unfolds between you, how you communicate, where you feel stuck, and how patterns develop over time. As a team, we work toward understanding these patterns with greater clarity and care.</p>
-            <p style="margin-top: var(--space-4);">Part of this process involves learning how each of you experiences and expresses emotion. Often, partners can feel misunderstood even when there is genuine care and effort. Together, we begin to "translate" each other's emotional languages, recognizing that empathy in a relationship goes beyond imagining how you might feel in the same situation. It involves drawing on a deeper understanding of your partner, their history, sensitivities, and ways of making meaning, to more fully grasp their experience.</p>
-            <p style="margin-top: var(--space-4);">Many couples find themselves caught in repeating cycles, miscommunications, frustrations, or disconnections that seem to resolve temporarily but then return. In therapy, we slow these moments down to better understand what is happening beneath the surface. This creates an opportunity to respond differently, with more awareness and intention, rather than reacting patterns.</p>
-            <p style="margin-top: var(--space-4);">Couples therapy also creates space to rebuild trust, strengthen connection, and re-engage with one another in more meaningful ways. This may involve working through conflict, navigating life transitions, or addressing longstanding tensions. Over time, the goal is not only to reduce distress, but to help you feel more seen, understood, and supported within the relationship.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>Part of this process involves learning how each of you experiences and expresses emotion. Often, partners can feel misunderstood even when there is genuine care and effort. Together, we begin to "translate" each other's emotional languages, recognizing that empathy in a relationship goes beyond imagining how you might feel in the same situation. It involves drawing on a deeper understanding of your partner, their history, sensitivities, and ways of making meaning, to more fully grasp their experience.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>Many couples find themselves caught in repeating cycles, miscommunications, frustrations, or disconnections that seem to resolve temporarily but then return. In therapy, we slow these moments down to better understand what is happening beneath the surface. This creates an opportunity to respond differently, with more awareness and intention, rather than reacting patterns.</p>
+            <p class="para-break" style="text-align: center; margin: var(--space-4) 0; letter-spacing: 0.15em;">&hellip; &hellip;</p>
+            <p>Couples therapy also creates space to rebuild trust, strengthen connection, and re-engage with one another in more meaningful ways. This may involve working through conflict, navigating life transitions, or addressing longstanding tensions. Over time, the goal is not only to reduce distress, but to help you feel more seen, understood, and supported within the relationship.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--secondary" aria-labelledby="working-heading">
-      <div class="container container--narrow">
-        <header class="section__header section__header--center">
-          <h2 id="working-heading" class="section__title">Working with me</h2>
-        </header>
-        <div class="list-block">
-          <div class="list-block__item">
-            <h3 class="list-block__title">Location</h3>
-            <p class="list-block__text">My office is located at 156 5th Avenue. I am available to work by zoom but I find that working together in person is far preferable. There is no substitute for being in the presence of another. I am happy to discuss.</p>
-          </div>
-          <div class="list-block__item">
-            <h3 class="list-block__title">Fees</h3>
-            <p class="list-block__text">My standard fee is discussed during the initial consultation. For patients who qualify, I have a sliding fee scale, which is to say that I reserve a percentage of my practice for people who need lower fees.</p>
-          </div>
-          <div class="list-block__item">
-            <h3 class="list-block__title">Insurance</h3>
-            <p class="list-block__text">I'm not in network with any insurance companies. If you have insurance and have out of network benefits, you can be reimbursed by your insurance company for sessions with me. I'll provide you with a monthly superbill. Insurance companies typically pay some percentage of therapy fees. This percentage is policy dependent. Check with your insurer to see if you have out of network benefits.</p>
-          </div>
-        </div>
-        <p style="margin-top: var(--space-8); font-size: var(--font-size-sm); color: var(--color-text-secondary); text-align: center;">My New York license number is: 001272<br>My NPI (National Provider ID) is: 1295348886</p>
       </div>
     </section>
 
@@ -184,13 +241,11 @@
     <div class="container footer__inner">
       <div>
         <p class="footer__brand">Dawn Eig, LP</p>
-        <p class="footer__text">Licensed Psychoanalyst in New York City. Individual and couples therapy, in-person and online.</p>
       </div>
       <div>
         <p class="footer__heading">Navigate</p>
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="/" class="footer__link">Home</a>
-          <a href="/about/" class="footer__link">About</a>
           <a href="/services/" class="footer__link">Services</a>
           <a href="/faq/" class="footer__link">FAQ</a>
           <a href="/contact/" class="footer__link">Contact</a>
@@ -199,20 +254,10 @@
       <div>
         <p class="footer__heading">Contact</p>
         <div class="footer__links">
-          <a href="tel:+19174946886" class="footer__link">(917) 494-6886</a>
+          <a href="tel:+191****6886" class="footer__link">(917) 494-6886</a>
           <a href="https://maps.google.com/?q=156+5th+Avenue+New+York+NY+10010" target="_blank" rel="noopener noreferrer" class="footer__link">156 5th Avenue<br>New York, NY 10010</a>
         </div>
       </div>
-      <div>
-        <p class="footer__heading">Legal</p>
-        <div class="footer__links">
-          <span class="footer__link">License: NY State 001272</span>
-          <span class="footer__link">Out of Network</span>
-        </div>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>&copy; 2026 Dawn Eig. All rights reserved.</p>
     </div>
   </footer>
 

@@ -24,7 +24,6 @@ function initMobileNav() {
     toggle.setAttribute('aria-expanded', 'false');
     mobileMenu.classList.remove('is-open');
     document.body.style.overflow = '';
-    // Also close any mobile accordions
     mobileMenu.querySelectorAll('.nav__accordion-content').forEach((p) => {
       p.classList.remove('is-open');
       p.style.maxHeight = '';
@@ -67,33 +66,21 @@ function initDropdowns() {
   const panels = nav.querySelectorAll('.nav__dropdown-panel');
 
   const closeAll = () => {
-    panels.forEach((panel) => {
-      panel.classList.remove('is-open');
-      panel.addEventListener(
-        'transitionend',
-        function handler() {
-          if (!panel.classList.contains('is-open')) {
-            panel.setAttribute('hidden', '');
-          }
-          panel.removeEventListener('transitionend', handler);
-        },
-        { once: true }
-      );
-      // Fallback if transition doesn't fire
-      setTimeout(() => {
+    panels.forEach((panel) => panel.classList.remove('is-open'));
+    toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+    setTimeout(() => {
+      panels.forEach((panel) => {
         if (!panel.classList.contains('is-open')) {
           panel.setAttribute('hidden', '');
         }
-      }, 200);
-    });
-    toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+      });
+    }, 160);
   };
 
   const openPanel = (panel, toggle) => {
     closeAll();
     panel.removeAttribute('hidden');
     toggle.setAttribute('aria-expanded', 'true');
-    // Force reflow so browser sees the change before adding class
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         panel.classList.add('is-open');
@@ -114,6 +101,13 @@ function initDropdowns() {
       } else {
         openPanel(panel, toggle);
       }
+    });
+  });
+
+  // Close when clicking a link inside a panel
+  panels.forEach((panel) => {
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => closeAll());
     });
   });
 
@@ -142,7 +136,6 @@ function initDropdowns() {
 
       const isOpen = content.classList.contains('is-open');
 
-      // Close siblings
       const parent = btn.closest('.nav__mobile');
       if (parent) {
         parent.querySelectorAll('.nav__accordion-content').forEach((c) => {
