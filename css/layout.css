@@ -1,4 +1,4 @@
-/* Layout primitives: containers, sections, grids */
+/* Layout primitives: containers, sections */
 
 .container {
   width: 100%;
@@ -23,57 +23,18 @@
   background-color: var(--color-bg-secondary);
 }
 
-.section--dark {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-on-dark);
-}
+/* ---- Utility ---- */
+.text-center { text-align: center; }
+.text-center p { margin-inline: auto; }
 
-.section--dark h1,
-.section--dark h2,
-.section--dark h3,
-.section--dark h4 {
-  color: var(--color-text-on-dark);
-}
-
-.section--dark p {
-  color: rgba(245, 240, 235, 0.85);
-}
-
-.section--dark .card {
-  color: var(--color-text-primary);
-}
-
-.section--dark .card h3,
-.section--dark .card .card__title {
-  color: var(--color-text-primary);
-}
-
-.section--dark .card p,
-.section--dark .card .card__text {
-  color: var(--color-text-secondary);
-}
-
-.grid {
-  display: grid;
-  gap: var(--space-8);
-}
-
-.grid--2 {
-  grid-template-columns: 1fr;
-}
-
-.grid--3 {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 48rem) {
-  .grid--2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 64rem) {
-  .grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

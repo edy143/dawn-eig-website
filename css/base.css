@@ -37,7 +37,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-accent);
+  color: var(--color-accent-hover);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
