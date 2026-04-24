@@ -38,7 +38,7 @@
 }
 
 .hero__text {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--space-8);
 }
@@ -156,6 +156,7 @@
   font-family: var(--font-serif);
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-3);
+  color: var(--color-text-on-dark);
 }
 
 .footer__text {
@@ -198,4 +199,18 @@
   .footer__inner {
     grid-template-columns: 2fr 1fr 1fr;
   }
+}
+
+.about-list {
+  padding-left: var(--space-5);
+  list-style: disc;
+  color: var(--color-text-secondary);
+}
+
+.about-list li {
+  margin-bottom: var(--space-3);
+}
+
+.about-list li:last-child {
+  margin-bottom: 0;
 }

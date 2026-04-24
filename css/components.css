@@ -404,3 +404,40 @@
 .nav__mobile-cta {
   margin-top: var(--space-4);
 }
+
+/* ---- Spacing utilities ---- */
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-8 { margin-top: var(--space-8); }
+.mx-auto { margin-inline: auto; }
+
+/* ---- Paragraph break separator ---- */
+.para-break {
+  text-align: center;
+  margin: var(--space-4) 0;
+  letter-spacing: 0.15em;
+}
+
+/* ---- Text block (secondary prose) ---- */
+.text-block {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.text-block > * + * {
+  margin-top: var(--space-4);
+}
+
+/* ---- Grid utilities ---- */
+.grid--start { align-items: start; }
+.gap-16 { gap: var(--space-16); }
+/* ---- Font & text utilities ---- */
+.text-sm { font-size: var(--font-size-sm); }
+.text-lg { font-size: var(--font-size-lg); }
+.font-serif { font-family: var(--font-serif); }
+.gap-12 { gap: var(--space-12); }
