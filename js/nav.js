@@ -68,24 +68,12 @@ function initDropdowns() {
   const closeAll = () => {
     panels.forEach((panel) => panel.classList.remove('is-open'));
     toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
-    setTimeout(() => {
-      panels.forEach((panel) => {
-        if (!panel.classList.contains('is-open')) {
-          panel.setAttribute('hidden', '');
-        }
-      });
-    }, 160);
   };
 
   const openPanel = (panel, toggle) => {
     closeAll();
-    panel.removeAttribute('hidden');
+    panel.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        panel.classList.add('is-open');
-      });
-    });
   };
 
   toggles.forEach((toggle) => {

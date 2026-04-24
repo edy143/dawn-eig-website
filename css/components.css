@@ -317,18 +317,11 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   z-index: 90;
   padding: var(--space-2);
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
-  visibility: hidden;
-  pointer-events: none;
+  display: none;
 }
 
 .nav__dropdown-panel.is-open {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
+  display: block;
 }
 
 /* Right-align last two dropdowns so they don't go off-screen */
