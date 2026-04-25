@@ -214,3 +214,38 @@
 .about-list li:last-child {
   margin-bottom: 0;
 }
+
+/* ---- Services page: equal-height cards ---- */
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+.services__grid > article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.services__grid > article h2 {
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-xl);
+}
+
+.services__grid > article p {
+  flex-grow: 1;
+}
+
+.services__grid > article p + p {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 64rem) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

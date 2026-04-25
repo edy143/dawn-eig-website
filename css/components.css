@@ -415,12 +415,6 @@
 .mt-8 { margin-top: var(--space-8); }
 .mx-auto { margin-inline: auto; }
 
-/* ---- Paragraph break separator ---- */
-.para-break {
-  text-align: center;
-  margin: var(--space-4) 0;
-  letter-spacing: 0.15em;
-}
 
 /* ---- Text block (secondary prose) ---- */
 .text-block {
